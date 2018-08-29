@@ -8,15 +8,15 @@ import (
 
 // Room type
 type Room struct {
-	id   string `json:"id"`
-	name string `json:"name"`
+	ID   string `json:"id"`
+	Name string `json:"name"`
 }
 
 // RoomResourceItf interface of room resource
 type RoomResourceItf interface {
 	GetAllRooms() ([]Room, error)
 	FindRoom(string) (Room, bool, error)
-	CreateRoom(*Room) (Room, error)
+	CreateRoom(*Room) error
 }
 
 // RoomResourceDB room resource from db
@@ -40,6 +40,21 @@ func InitRoomDomain(rsc RoomResourceItf) RoomDomain {
 	}
 }
 
+// GetAllRooms domain
+func (roomDomain RoomDomain) GetAllRooms() ([]Room, error) {
+	return roomDomain.resource.GetAllRooms()
+}
+
+// FindRoom domain
+func (roomDomain RoomDomain) FindRoom(roomID string) (Room, bool, error) {
+	return roomDomain.resource.FindRoom(roomID)
+}
+
+// CreateRoom domain
+func (roomDomain RoomDomain) CreateRoom(room *Room) error {
+	return roomDomain.resource.CreateRoom(room)
+}
+
 // GetAllRooms fake
 func (roomResource RoomResourceFake) GetAllRooms() ([]Room, error) {
 	return []Room{
@@ -58,7 +73,7 @@ func (roomResource RoomResourceFake) FindRoom(id string) (Room, bool, error) {
 	}
 
 	for _, room := range rooms {
-		if id == room.id {
+		if id == room.ID {
 			return room, true, nil
 		}
 	}
@@ -84,6 +99,6 @@ func (roomResource RoomResourceFake) CreateRoom(room *Room) error {
 		}
 	}
 
-	room.id = id
+	room.ID = id
 	return nil
 }

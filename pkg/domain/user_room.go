@@ -6,9 +6,9 @@ import (
 
 // UserRoom type
 type UserRoom struct {
-	id       int    `json:"id"`
-	username string `json:"username"`
-	roomID   string `json:"roomID"`
+	ID       int    `json:"id"`
+	Username string `json:"username"`
+	RoomID   string `json:"roomID"`
 }
 
 // UserRoomResourceItf interface of room resource
@@ -34,6 +34,21 @@ func InitUserRoomDomain(rsc UserRoomResourceItf) UserRoomDomain {
 	}
 }
 
+// GetRoomMembers domain
+func (userRoomDomain UserRoomDomain) GetRoomMembers(roomID string) ([]string, error) {
+	return userRoomDomain.resource.GetRoomMembers(roomID)
+}
+
+// GetUserRooms domain
+func (userRoomDomain UserRoomDomain) GetUserRooms(username string) ([]string, error) {
+	return userRoomDomain.resource.GetUserRooms(username)
+}
+
+// CreateUserRoom domain
+func (userRoomDomain UserRoomDomain) CreateUserRoom(userRoom *UserRoom) error {
+	return userRoomDomain.resource.CreateUserRoom(userRoom)
+}
+
 // GetRoomMembers fake
 func (userRoomResource UserRoomResourceFake) GetRoomMembers(roomID string) ([]string, error) {
 	if roomID == "room1" {
@@ -54,18 +69,18 @@ func (userRoomResource UserRoomResourceFake) GetUserRooms(username string) ([]st
 
 // CreateUserRoom fake
 func (userRoomResource UserRoomResourceFake) CreateUserRoom(userRoom *UserRoom) error {
-	joinedRooms, err := userRoomResource.GetUserRooms(userRoom.username)
+	joinedRooms, err := userRoomResource.GetUserRooms(userRoom.Username)
 
 	if err != nil {
 		return err
 	}
 
 	for _, joinedRoomID := range joinedRooms {
-		if joinedRoomID == userRoom.roomID {
+		if joinedRoomID == userRoom.RoomID {
 			return fmt.Errorf("Already joined")
 		}
 	}
 
-	userRoom.id = 1
+	userRoom.ID = 1
 	return nil
 }

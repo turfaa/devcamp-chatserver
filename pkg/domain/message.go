@@ -2,13 +2,20 @@ package domain
 
 // Message type
 type Message struct {
-	id          int `json:"id"`
-	timestamp   int64 `json:"timestamp"`
-	sender      string `json:"sender"`
-	messageType string `json:"message_type"`
-	receiver    string `json:"receiver"`
-	text        string `json:"text"`
+	ID          int    `json:"id"`
+	Timestamp   int64  `json:"timestamp"`
+	Sender      string `json:"sender"`
+	MessageType string `json:"message_type"`
+	Receiver    string `json:"receiver"`
+	Text        string `json:"text"`
 }
+
+// MessageSorter sorter
+type MessageSorter []Message
+
+func (a MessageSorter) Len() int           { return len(a) }
+func (a MessageSorter) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
+func (a MessageSorter) Less(i, j int) bool { return a[i].Timestamp < a[j].Timestamp }
 
 // MessageResourceItf interface of room resource
 type MessageResourceItf interface {
@@ -33,18 +40,33 @@ func InitMessageDomain(rsc MessageResourceItf) MessageDomain {
 	}
 }
 
+// GetPrivateMessages domain
+func (messageDomain MessageDomain) GetPrivateMessages(username string) ([]Message, error) {
+	return messageDomain.resource.GetPrivateMessages(username)
+}
+
+// GetRoomMessages domain
+func (messageDomain MessageDomain) GetRoomMessages(roomID string) ([]Message, error) {
+	return messageDomain.resource.GetRoomMessages(roomID)
+}
+
+// CreateMessage domain
+func (messageDomain MessageDomain) CreateMessage(message *Message) error {
+	return messageDomain.resource.CreateMessage(message)
+}
+
 // GetPrivateMessages fake
 func (messageResource MessageResourceFake) GetPrivateMessages(username string) ([]Message, error) {
 	messages := []Message{
 		Message{1, 1, "turfaa", "private", "kamu", "halo kamu"},
 		Message{2, 2, "kamu", "private", "turfaa", "halo juga"},
-		Message{3, 3, "turfaa", "room", "room1", "hai semua"}
+		Message{3, 3, "turfaa", "room", "room1", "hai semua"},
 	}
 
 	var privateMessages []Message
 
 	for _, message := range messages {
-		if message.messageType == "private" && (message.sender == username || message.receiver == username) {
+		if message.MessageType == "private" && (message.Sender == username || message.Receiver == username) {
 			privateMessages = append(privateMessages, message)
 		}
 	}
@@ -57,13 +79,13 @@ func (messageResource MessageResourceFake) GetRoomMessages(roomID string) ([]Mes
 	messages := []Message{
 		Message{1, 1, "turfaa", "private", "kamu", "halo kamu"},
 		Message{2, 2, "kamu", "private", "turfaa", "halo juga"},
-		Message{3, 3, "turfaa", "room", "room1", "hai semua"}
+		Message{3, 3, "turfaa", "room", "room1", "hai semua"},
 	}
 
 	var roomMessages []Message
 
 	for _, message := range messages {
-		if message.messageType == "room" && (message.receiver == roomID) {
+		if message.MessageType == "room" && (message.Receiver == roomID) {
 			roomMessages = append(roomMessages, message)
 		}
 	}
