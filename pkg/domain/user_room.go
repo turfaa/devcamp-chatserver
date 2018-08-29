@@ -6,16 +6,16 @@ import (
 
 // UserRoom type
 type UserRoom struct {
-	id       int
-	username string
-	roomID   string
+	id       int    `json:"id"`
+	username string `json:"username"`
+	roomID   string `json:"roomID"`
 }
 
 // UserRoomResourceItf interface of room resource
 type UserRoomResourceItf interface {
 	GetRoomMembers(string) ([]string, error)
 	GetUserRooms(string) ([]string, error)
-	CreateUserRoom(string) (string, string, error)
+	CreateUserRoom(*UserRoom) error
 }
 
 // UserRoomResourceFake fake
@@ -53,18 +53,19 @@ func (userRoomResource UserRoomResourceFake) GetUserRooms(username string) ([]st
 }
 
 // CreateUserRoom fake
-func (userRoomResource UserRoomResourceFake) CreateUserRoom(username string, roomID string) (UserRoom, error) {
-	joinedRooms, err := userRoomResource.GetUserRooms(username)
+func (userRoomResource UserRoomResourceFake) CreateUserRoom(userRoom *UserRoom) error {
+	joinedRooms, err := userRoomResource.GetUserRooms(userRoom.username)
 
 	if err != nil {
-		return UserRoom{}, err
+		return err
 	}
 
-	for _, joinedRoomId := range joinedRooms {
-		if joinedRoomId == roomID {
-			return UserRoom{}, fmt.Errorf("Already joined")
+	for _, joinedRoomID := range joinedRooms {
+		if joinedRoomID == userRoom.roomID {
+			return fmt.Errorf("Already joined")
 		}
 	}
 
-	return UserRoom{1, username, roomID}, nil
+	userRoom.id = 1
+	return nil
 }

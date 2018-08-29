@@ -8,15 +8,15 @@ import (
 
 // Room type
 type Room struct {
-	id   string
-	name string
+	id   string `json:"id"`
+	name string `json:"name"`
 }
 
 // RoomResourceItf interface of room resource
 type RoomResourceItf interface {
 	GetAllRooms() ([]Room, error)
 	FindRoom(string) (Room, bool, error)
-	CreateRoom(string) (Room, error)
+	CreateRoom(*Room) (Room, error)
 }
 
 // RoomResourceDB room resource from db
@@ -67,22 +67,23 @@ func (roomResource RoomResourceFake) FindRoom(id string) (Room, bool, error) {
 }
 
 // CreateRoom fake
-func (roomResource RoomResourceFake) CreateRoom(name string) (Room, error) {
+func (roomResource RoomResourceFake) CreateRoom(room *Room) error {
 	id := utils.GenerateRandomString(32)
 
 	_, found, err := roomResource.FindRoom(id)
 
 	if err != nil {
-		return Room{}, err
+		return err
 	}
 
 	for found {
 		id = utils.GenerateRandomString(32)
 
 		if _, found, err = roomResource.FindRoom(id); err != nil {
-			return Room{}, err
+			return err
 		}
 	}
 
-	return Room{id, name}, nil
+	room.id = id
+	return nil
 }
