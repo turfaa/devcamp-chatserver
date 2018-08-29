@@ -102,3 +102,26 @@ func (chatUsecase *ChatUsecase) JoinRoom(userRoom *domain.UserRoom) error {
 
 	return nil
 }
+
+// GetUserRooms get user rooms
+func (chatUsecase *ChatUsecase) GetUserRooms(username string) ([]domain.Room, error) {
+	if roomIDs, err := chatUsecase.userRoomDomain.GetUserRooms(username); err != nil {
+		return []domain.Room{}, err
+	} else {
+		var rooms []domain.Room
+
+		for _, roomID := range roomIDs {
+			if room, found, err := chatUsecase.roomDomain.FindRoom(roomID); !found || err != nil {
+				if err != nil {
+					return []domain.Room{}, err
+				} else {
+					return []domain.Room{}, err
+				}
+			} else {
+				rooms = append(rooms, room)
+			}
+		}
+
+		return rooms, nil
+	}
+}
