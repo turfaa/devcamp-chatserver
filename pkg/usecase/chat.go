@@ -4,13 +4,11 @@ import (
 	"chatserver/pkg/domain"
 	"chatserver/pkg/lib/config"
 	"fmt"
-	"sort"
 )
 
 // ChatUsecase chat use case
 type ChatUsecase struct {
 	config         config.Config
-	userDomain     domain.UserDomain
 	roomDomain     domain.RoomDomain
 	userRoomDomain domain.UserRoomDomain
 	messageDomain  domain.MessageDomain
@@ -19,7 +17,6 @@ type ChatUsecase struct {
 // InitChatUsecase init
 func InitChatUsecase(
 	config config.Config,
-	userDomain domain.UserDomain,
 	roomDomain domain.RoomDomain,
 	userRoomDomain domain.UserRoomDomain,
 	messageDomain domain.MessageDomain,
@@ -27,7 +24,6 @@ func InitChatUsecase(
 
 	return &ChatUsecase{
 		config,
-		userDomain,
 		roomDomain,
 		userRoomDomain,
 		messageDomain,
@@ -54,7 +50,7 @@ func (chatUsecase *ChatUsecase) GetMessages(username string) ([]domain.Message, 
 		}
 	}
 
-	sort.Sort(domain.MessageSorter(messages))
+	// sort.Sort(domain.MessageSorter(messages))
 	return messages, nil
 }
 
@@ -101,6 +97,11 @@ func (chatUsecase *ChatUsecase) JoinRoom(userRoom *domain.UserRoom) error {
 	}
 
 	return nil
+}
+
+// GetAllRooms get all rooms
+func (chatUsecase *ChatUsecase) GetAllRooms() ([]domain.Room, error) {
+	return chatUsecase.roomDomain.GetAllRooms()
 }
 
 // GetUserRooms get user rooms

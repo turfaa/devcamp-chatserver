@@ -1,5 +1,7 @@
 package domain
 
+import "github.com/tokopedia/tdk/go/log"
+
 // Message type
 type Message struct {
 	ID          int    `json:"id"`
@@ -66,11 +68,12 @@ func (messageResource MessageResourceFake) GetPrivateMessages(username string) (
 	var privateMessages []Message
 
 	for _, message := range messages {
+		log.Info(message.Receiver, message.Sender, message.MessageType, username)
 		if message.MessageType == "private" && (message.Sender == username || message.Receiver == username) {
 			privateMessages = append(privateMessages, message)
 		}
 	}
-
+	log.Info(privateMessages)
 	return privateMessages, nil
 }
 
@@ -93,7 +96,7 @@ func (messageResource MessageResourceFake) GetRoomMessages(roomID string) ([]Mes
 	return roomMessages, nil
 }
 
-// CreateRoomMessage fake
-func (messageResource MessageResourceFake) CreateRoomMessage(message *Message) error {
+// CreateMessage fake
+func (messageResource MessageResourceFake) CreateMessage(message *Message) error {
 	return nil
 }

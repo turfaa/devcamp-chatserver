@@ -6,3 +6,206 @@
 {"level":"info","ts":1535518643.941243,"msg":"Supervisor: starting geni-service on [::]:5050"}
 {"level":"info","ts":1535518643.941343,"msg":"Supervisor: starting http-service on [::]:8000"}
 {"level":"info","ts":1535518643.9412296,"msg":"Supervisor: starting admin-port on [::]:8573"}
+{"level":"info","ts":1535532319.0010633,"msg":"Supervisor: stopping process geni-service"}
+{"level":"info","ts":1535532319.0016768,"msg":"Supervisor: stopping process admin-port"}
+{"level":"info","ts":1535532319.0020866,"msg":"Supervisor: stopping process http-service"}
+{"level":"info","ts":1535532322.4875536,"msg":"Kothak: Connected to Redis rates"}
+{"level":"info","ts":1535532322.521266,"msg":"Kothak: Connected to DB toped"}
+{"level":"info","ts":1535532351.2450032,"msg":"Kothak: Connected to Redis rates"}
+{"level":"info","ts":1535532351.2625794,"msg":"Kothak: Connected to DB toped"}
+{"level":"info","ts":1535532544.4731812,"msg":"Kothak: Connected to Redis rates"}
+{"level":"info","ts":1535532544.4918315,"msg":"Kothak: Connected to DB toped"}
+{"level":"info","ts":1535532578.6032217,"msg":"Kothak: Connected to Redis rates"}
+{"level":"info","ts":1535532578.623591,"msg":"Kothak: Connected to DB toped"}
+{"level":"info","ts":1535532578.624592,"msg":"Supervisor: starting geni-service on [::]:5050"}
+{"level":"info","ts":1535532578.6246064,"msg":"Supervisor: starting http-service on [::]:8000"}
+{"level":"info","ts":1535532578.6246223,"msg":"Supervisor: starting admin-port on [::]:8573"}
+{"level":"info","ts":1535532726.5458815,"msg":"Supervisor: stopping process admin-port"}
+{"level":"info","ts":1535532726.5459397,"msg":"Supervisor: stopping process geni-service"}
+{"level":"info","ts":1535532726.546072,"msg":"Supervisor: stopping process http-service"}
+{"level":"info","ts":1535532729.4955359,"msg":"Kothak: Connected to Redis rates"}
+{"level":"info","ts":1535532729.5094452,"msg":"Kothak: Connected to DB toped"}
+{"level":"info","ts":1535532757.6552808,"msg":"Kothak: Connected to Redis rates"}
+{"level":"info","ts":1535532757.6662083,"msg":"Kothak: Connected to DB toped"}
+{"level":"info","ts":1535532757.6674445,"msg":"Supervisor: starting geni-service on [::]:5050"}
+{"level":"info","ts":1535532757.6675034,"msg":"Supervisor: starting admin-port on [::]:8573"}
+{"level":"info","ts":1535532757.6677964,"msg":"Supervisor: starting http-service on [::]:8000"}
+{"level":"info","ts":1535532759.382292,"msg":"Supervisor: stopping process admin-port"}
+{"level":"info","ts":1535532759.3823836,"msg":"Supervisor: stopping process geni-service"}
+{"level":"info","ts":1535532759.3823044,"msg":"Supervisor: stopping process http-service"}
+{"level":"info","ts":1535532795.9861453,"msg":"Kothak: Connected to Redis rates"}
+{"level":"info","ts":1535532796.0036879,"msg":"Kothak: Connected to DB toped"}
+{"level":"info","ts":1535532796.0049374,"msg":"Supervisor: starting admin-port on [::]:8573"}
+{"level":"info","ts":1535532796.0049906,"msg":"Supervisor: starting geni-service on [::]:5050"}
+{"level":"info","ts":1535532796.0049882,"msg":"Supervisor: starting http-service on [::]:8000"}
+{"level":"info","ts":1535532871.2877538,"msg":"Supervisor: stopping process http-service"}
+{"level":"info","ts":1535532871.287734,"msg":"Supervisor: stopping process geni-service"}
+{"level":"info","ts":1535532871.2877321,"msg":"Supervisor: stopping process admin-port"}
+{"level":"info","ts":1535532873.5283728,"msg":"Kothak: Connected to Redis rates"}
+{"level":"info","ts":1535532873.5484145,"msg":"Kothak: Connected to DB toped"}
+{"level":"info","ts":1535532873.5498374,"msg":"Supervisor: starting http-service on [::]:8000"}
+{"level":"info","ts":1535532873.5499206,"msg":"Supervisor: starting geni-service on [::]:5050"}
+{"level":"info","ts":1535532873.549966,"msg":"Supervisor: starting admin-port on [::]:8573"}
+{"level":"info","ts":1535532904.356036,"msg":"Supervisor: stopping process admin-port"}
+{"level":"info","ts":1535532904.3560963,"msg":"Supervisor: stopping process geni-service"}
+{"level":"info","ts":1535532904.3561957,"msg":"Supervisor: stopping process http-service"}
+{"level":"fatal","ts":1535532906.3570545,"msg":"context deadline exceeded"}
+{"level":"info","ts":1535532909.5330698,"msg":"Kothak: Connected to Redis rates"}
+{"level":"info","ts":1535532909.5466852,"msg":"Kothak: Connected to DB toped"}
+{"level":"info","ts":1535532909.547878,"msg":"Supervisor: starting http-service on [::]:8000"}
+{"level":"info","ts":1535532909.5479012,"msg":"Supervisor: starting geni-service on [::]:5050"}
+{"level":"info","ts":1535532909.5478826,"msg":"Supervisor: starting admin-port on [::]:8573"}
+{"level":"info","ts":1535532915.2346025,"msg":"Supervisor: stopping process admin-port"}
+{"level":"info","ts":1535532915.2346191,"msg":"Supervisor: stopping process geni-service"}
+{"level":"info","ts":1535532915.2346652,"msg":"Supervisor: stopping process http-service"}
+{"level":"fatal","ts":1535532917.2373002,"msg":"context deadline exceeded"}
+{"level":"info","ts":1535532919.032102,"msg":"Kothak: Connected to Redis rates"}
+{"level":"info","ts":1535532919.0469382,"msg":"Kothak: Connected to DB toped"}
+{"level":"info","ts":1535532919.0479193,"msg":"Supervisor: starting http-service on [::]:8000"}
+{"level":"info","ts":1535532919.047938,"msg":"Supervisor: starting admin-port on [::]:8573"}
+{"level":"info","ts":1535532919.047916,"msg":"Supervisor: starting geni-service on [::]:5050"}
+{"level":"info","ts":1535532966.0162237,"msg":"Supervisor: stopping process http-service"}
+{"level":"info","ts":1535532966.016211,"msg":"Supervisor: stopping process admin-port"}
+{"level":"info","ts":1535532966.0162156,"msg":"Supervisor: stopping process geni-service"}
+{"level":"fatal","ts":1535532968.0187385,"msg":"context deadline exceeded"}
+{"level":"info","ts":1535532971.5414321,"msg":"Kothak: Connected to Redis rates"}
+{"level":"info","ts":1535532971.5558262,"msg":"Kothak: Connected to DB toped"}
+{"level":"info","ts":1535532971.5566459,"msg":"Supervisor: starting geni-service on [::]:5050"}
+{"level":"info","ts":1535532971.5566459,"msg":"Supervisor: starting http-service on [::]:8000"}
+{"level":"info","ts":1535532971.556721,"msg":"Supervisor: starting admin-port on [::]:8573"}
+{"level":"info","ts":1535532998.1187227,"msg":"Supervisor: stopping process http-service"}
+{"level":"info","ts":1535532998.1187131,"msg":"Supervisor: stopping process admin-port"}
+{"level":"info","ts":1535532998.1187232,"msg":"Supervisor: stopping process geni-service"}
+{"level":"info","ts":1535533000.9488254,"msg":"Kothak: Connected to Redis rates"}
+{"level":"info","ts":1535533000.9614305,"msg":"Kothak: Connected to DB toped"}
+{"level":"info","ts":1535533000.962299,"msg":"Supervisor: starting http-service on [::]:8000"}
+{"level":"info","ts":1535533000.9623048,"msg":"Supervisor: starting admin-port on [::]:8573"}
+{"level":"info","ts":1535533000.9623194,"msg":"Supervisor: starting geni-service on [::]:5050"}
+{"level":"info","ts":1535533036.9363422,"msg":"Supervisor: stopping process http-service"}
+{"level":"info","ts":1535533036.936374,"msg":"Supervisor: stopping process admin-port"}
+{"level":"info","ts":1535533036.936404,"msg":"Supervisor: stopping process geni-service"}
+{"level":"info","ts":1535533040.5038543,"msg":"Kothak: Connected to Redis rates"}
+{"level":"info","ts":1535533040.5170126,"msg":"Kothak: Connected to DB toped"}
+{"level":"info","ts":1535533040.518067,"msg":"Supervisor: starting geni-service on [::]:5050"}
+{"level":"info","ts":1535533040.5180876,"msg":"Supervisor: starting http-service on [::]:8000"}
+{"level":"info","ts":1535533040.5181298,"msg":"Supervisor: starting admin-port on [::]:8573"}
+{"level":"error","ts":1535533042.9776938,"msg":"hmm"}
+{"level":"error","ts":1535533043.4955356,"msg":"hmm"}
+{"level":"error","ts":1535533043.740448,"msg":"hmm"}
+{"level":"error","ts":1535533043.9124982,"msg":"hmm"}
+{"level":"error","ts":1535533044.0623152,"msg":"hmm"}
+{"level":"info","ts":1535533064.5314844,"msg":"Supervisor: stopping process geni-service"}
+{"level":"info","ts":1535533064.531407,"msg":"Supervisor: stopping process http-service"}
+{"level":"info","ts":1535533064.531438,"msg":"Supervisor: stopping process admin-port"}
+{"level":"info","ts":1535533067.128952,"msg":"Kothak: Connected to Redis rates"}
+{"level":"info","ts":1535533067.1454632,"msg":"Kothak: Connected to DB toped"}
+{"level":"info","ts":1535533067.1464262,"msg":"Supervisor: starting http-service on [::]:8000"}
+{"level":"info","ts":1535533067.1464589,"msg":"Supervisor: starting geni-service on [::]:5050"}
+{"level":"info","ts":1535533067.1464942,"msg":"Supervisor: starting admin-port on [::]:8573"}
+{"level":"info","ts":1535533067.8174086,"msg":"hmm"}
+{"level":"info","ts":1535533067.8175342,"msg":"[]"}
+{"level":"info","ts":1535533077.4868693,"msg":"hmm"}
+{"level":"info","ts":1535533077.4869304,"msg":"[]"}
+{"level":"info","ts":1535533082.541881,"msg":"hmm"}
+{"level":"info","ts":1535533082.5419588,"msg":"[]"}
+{"level":"info","ts":1535533167.5440261,"msg":"Supervisor: stopping process geni-service"}
+{"level":"info","ts":1535533167.544027,"msg":"Supervisor: stopping process admin-port"}
+{"level":"info","ts":1535533167.5440488,"msg":"Supervisor: stopping process http-service"}
+{"level":"info","ts":1535533171.0713973,"msg":"Kothak: Connected to Redis rates"}
+{"level":"info","ts":1535533171.0808825,"msg":"Kothak: Connected to DB toped"}
+{"level":"info","ts":1535533171.0817938,"msg":"Supervisor: starting geni-service on [::]:5050"}
+{"level":"info","ts":1535533171.0818455,"msg":"Supervisor: starting admin-port on [::]:8573"}
+{"level":"info","ts":1535533171.0818088,"msg":"Supervisor: starting http-service on [::]:8000"}
+{"level":"info","ts":1535533171.2891603,"msg":"[]"}
+{"level":"info","ts":1535533178.309911,"msg":"[]"}
+{"level":"info","ts":1535533206.2612796,"msg":"Supervisor: stopping process geni-service"}
+{"level":"info","ts":1535533206.2613285,"msg":"Supervisor: stopping process http-service"}
+{"level":"info","ts":1535533206.2612638,"msg":"Supervisor: stopping process admin-port"}
+{"level":"info","ts":1535533209.1589127,"msg":"Kothak: Connected to Redis rates"}
+{"level":"info","ts":1535533209.1678183,"msg":"Kothak: Connected to DB toped"}
+{"level":"info","ts":1535533209.1689327,"msg":"Supervisor: starting http-service on [::]:8000"}
+{"level":"info","ts":1535533209.1690161,"msg":"Supervisor: starting geni-service on [::]:5050"}
+{"level":"info","ts":1535533209.1690373,"msg":"Supervisor: starting admin-port on [::]:8573"}
+{"level":"info","ts":1535533210.659868,"msg":"kamuturfaaprivate"}
+{"level":"info","ts":1535533210.6600878,"msg":"turfaakamuprivate"}
+{"level":"info","ts":1535533210.6603,"msg":"room1turfaaroom"}
+{"level":"info","ts":1535533210.660341,"msg":"[]"}
+{"level":"info","ts":1535533235.0075378,"msg":"Supervisor: stopping process admin-port"}
+{"level":"info","ts":1535533235.0075681,"msg":"Supervisor: stopping process geni-service"}
+{"level":"info","ts":1535533235.0076697,"msg":"Supervisor: stopping process http-service"}
+{"level":"info","ts":1535533238.232984,"msg":"Kothak: Connected to Redis rates"}
+{"level":"info","ts":1535533238.2471,"msg":"Kothak: Connected to DB toped"}
+{"level":"info","ts":1535533238.2483292,"msg":"Supervisor: starting http-service on [::]:8000"}
+{"level":"info","ts":1535533238.2484155,"msg":"Supervisor: starting geni-service on [::]:5050"}
+{"level":"info","ts":1535533238.2488601,"msg":"Supervisor: starting admin-port on [::]:8573"}
+{"level":"info","ts":1535533238.51138,"msg":"[]"}
+{"level":"info","ts":1535533239.0232704,"msg":"[]"}
+{"level":"info","ts":1535533239.4485922,"msg":"[]"}
+{"level":"info","ts":1535533288.090281,"msg":"Supervisor: stopping process geni-service"}
+{"level":"info","ts":1535533288.0903,"msg":"Supervisor: stopping process admin-port"}
+{"level":"info","ts":1535533288.0903323,"msg":"Supervisor: stopping process http-service"}
+{"level":"info","ts":1535533290.9618216,"msg":"Kothak: Connected to Redis rates"}
+{"level":"info","ts":1535533290.9724505,"msg":"Kothak: Connected to DB toped"}
+{"level":"info","ts":1535533290.973882,"msg":"Supervisor: starting geni-service on [::]:5050"}
+{"level":"info","ts":1535533290.97389,"msg":"Supervisor: starting http-service on [::]:8000"}
+{"level":"info","ts":1535533290.9739053,"msg":"Supervisor: starting admin-port on [::]:8573"}
+{"level":"info","ts":1535533293.776669,"msg":"kamuturfaaprivate"}
+{"level":"info","ts":1535533293.7767432,"msg":"turfaakamuprivate"}
+{"level":"info","ts":1535533293.776772,"msg":"room1turfaaroom"}
+{"level":"info","ts":1535533293.776801,"msg":"[]"}
+{"level":"info","ts":1535533315.1013434,"msg":"Supervisor: stopping process admin-port"}
+{"level":"info","ts":1535533315.1014154,"msg":"Supervisor: stopping process http-service"}
+{"level":"info","ts":1535533315.1013575,"msg":"Supervisor: stopping process geni-service"}
+{"level":"info","ts":1535533318.270467,"msg":"Kothak: Connected to Redis rates"}
+{"level":"info","ts":1535533318.2861836,"msg":"Kothak: Connected to DB toped"}
+{"level":"info","ts":1535533318.2874842,"msg":"Supervisor: starting admin-port on [::]:8573"}
+{"level":"info","ts":1535533318.2874181,"msg":"Supervisor: starting geni-service on [::]:5050"}
+{"level":"info","ts":1535533318.2875323,"msg":"Supervisor: starting http-service on [::]:8000"}
+{"level":"info","ts":1535533320.7550154,"msg":"kamuturfaaprivate"}
+{"level":"info","ts":1535533320.7551334,"msg":"turfaakamuprivate"}
+{"level":"info","ts":1535533320.7551591,"msg":"room1turfaaroom"}
+{"level":"info","ts":1535533320.7551827,"msg":"[]"}
+{"level":"info","ts":1535533345.1986105,"msg":"Supervisor: stopping process admin-port"}
+{"level":"info","ts":1535533345.1986697,"msg":"Supervisor: stopping process geni-service"}
+{"level":"info","ts":1535533345.1988757,"msg":"Supervisor: stopping process http-service"}
+{"level":"fatal","ts":1535533347.1992462,"msg":"context deadline exceeded"}
+{"level":"info","ts":1535533350.9080858,"msg":"Kothak: Connected to Redis rates"}
+{"level":"info","ts":1535533350.9255478,"msg":"Kothak: Connected to DB toped"}
+{"level":"info","ts":1535533350.9264486,"msg":"Supervisor: starting http-service on [::]:8000"}
+{"level":"info","ts":1535533350.9264612,"msg":"Supervisor: starting admin-port on [::]:8573"}
+{"level":"info","ts":1535533350.926477,"msg":"Supervisor: starting geni-service on [::]:5050"}
+{"level":"info","ts":1535533352.4201996,"msg":""}
+{"level":"info","ts":1535533352.420318,"msg":"kamuturfaaprivate"}
+{"level":"info","ts":1535533352.420339,"msg":"turfaakamuprivate"}
+{"level":"info","ts":1535533352.4203615,"msg":"room1turfaaroom"}
+{"level":"info","ts":1535533352.4203866,"msg":"[]"}
+{"level":"info","ts":1535533361.7756655,"msg":"Supervisor: stopping process admin-port"}
+{"level":"info","ts":1535533361.775709,"msg":"Supervisor: stopping process http-service"}
+{"level":"info","ts":1535533361.7756717,"msg":"Supervisor: stopping process geni-service"}
+{"level":"fatal","ts":1535533363.7799137,"msg":"context deadline exceeded"}
+{"level":"info","ts":1535533366.4218843,"msg":"Kothak: Connected to Redis rates"}
+{"level":"info","ts":1535533366.448417,"msg":"Kothak: Connected to DB toped"}
+{"level":"info","ts":1535533366.4494746,"msg":"Supervisor: starting http-service on [::]:8000"}
+{"level":"info","ts":1535533366.4495134,"msg":"Supervisor: starting geni-service on [::]:5050"}
+{"level":"info","ts":1535533366.4495873,"msg":"Supervisor: starting admin-port on [::]:8573"}
+{"level":"info","ts":1535533366.531745,"msg":"map[]"}
+{"level":"info","ts":1535533366.5318553,"msg":"kamuturfaaprivate"}
+{"level":"info","ts":1535533366.5318794,"msg":"turfaakamuprivate"}
+{"level":"info","ts":1535533366.5319026,"msg":"room1turfaaroom"}
+{"level":"info","ts":1535533366.5319252,"msg":"[]"}
+{"level":"info","ts":1535533471.814052,"msg":"Supervisor: stopping process admin-port"}
+{"level":"info","ts":1535533471.813963,"msg":"Supervisor: stopping process geni-service"}
+{"level":"info","ts":1535533471.813963,"msg":"Supervisor: stopping process http-service"}
+{"level":"info","ts":1535533474.9745395,"msg":"Kothak: Connected to Redis rates"}
+{"level":"info","ts":1535533474.9886096,"msg":"Kothak: Connected to DB toped"}
+{"level":"info","ts":1535533474.9894981,"msg":"Supervisor: starting geni-service on [::]:5050"}
+{"level":"info","ts":1535533474.9895687,"msg":"Supervisor: starting admin-port on [::]:8573"}
+{"level":"info","ts":1535533474.989559,"msg":"Supervisor: starting http-service on [::]:8000"}
+{"level":"info","ts":1535533486.904277,"msg":"map[username:turfaa]"}
+{"level":"info","ts":1535533486.9043381,"msg":"kamuturfaaprivateturfaa"}
+{"level":"info","ts":1535533486.9043605,"msg":"turfaakamuprivateturfaa"}
+{"level":"info","ts":1535533486.9043813,"msg":"room1turfaaroomturfaa"}
+{"level":"info","ts":1535533486.9044125,"msg":"[{1 1 turfaa private kamu halo kamu} {2 2 kamu private turfaa halo juga}]"}
+{"level":"info","ts":1535533743.7699535,"msg":"Supervisor: stopping process admin-port"}
+{"level":"info","ts":1535533743.7700064,"msg":"Supervisor: stopping process geni-service"}
+{"level":"info","ts":1535533743.7699773,"msg":"Supervisor: stopping process http-service"}

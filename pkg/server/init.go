@@ -17,6 +17,11 @@ var orderDomain domain.OrderDomain
 var orderUsecase *usecase.OrderUsecase
 var userDomain domain.UserDomain
 
+var roomDomain domain.RoomDomain
+var userRoomDomain domain.UserRoomDomain
+var messageDomain domain.MessageDomain
+var chatUsecase *usecase.ChatUsecase
+
 // Init :
 // We do all the wire up in this Init() function
 // please return any error if you fail to initialize something
@@ -40,6 +45,22 @@ func Init(app *app.App) error {
 
 	userDomain = domain.InitUserDomain(
 		domain.UserResource{db},
+	)
+
+	roomDomain = domain.InitRoomDomain(
+		domain.RoomResourceFake{},
+	)
+
+	userRoomDomain = domain.InitUserRoomDomain(
+		domain.UserRoomResourceFake{},
+	)
+
+	messageDomain = domain.InitMessageDomain(
+		domain.MessageResourceFake{},
+	)
+
+	chatUsecase = usecase.InitChatUsecase(
+		cfg, roomDomain, userRoomDomain, messageDomain,
 	)
 
 	// in this case orderUsecase needs multiple domain
