@@ -1,7 +1,12 @@
 package domain
 
+import (
+	"fmt"
+)
+
 // UserRoom type
 type UserRoom struct {
+	id       int
 	username string
 	roomID   string
 }
@@ -45,4 +50,21 @@ func (userRoomResource UserRoomResourceFake) GetUserRooms(username string) ([]st
 	}
 
 	return []string{}, nil
+}
+
+// CreateUserRoom fake
+func (userRoomResource UserRoomResourceFake) CreateUserRoom(username string, roomID string) (UserRoom, error) {
+	joinedRooms, err := userRoomResource.GetUserRooms(username)
+
+	if err != nil {
+		return UserRoom{}, err
+	}
+
+	for _, joinedRoomId := range joinedRooms {
+		if joinedRoomId == roomID {
+			return UserRoom{}, fmt.Errorf("Already joined")
+		}
+	}
+
+	return UserRoom{1, username, roomID}, nil
 }
