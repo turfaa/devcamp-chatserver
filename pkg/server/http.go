@@ -18,10 +18,39 @@ func NewHttpServer() HttpService {
 
 func (s HttpService) RegisterHandler(r *http.Router) {
 	r.HandleFunc("/", index, "GET")
-
 	r.HandleFunc("/new_order", handleNewOrder, "POST")
 
+	r.HandleFunc("/messages", handleGetMessage, "GET")
+	r.HandleFunc("/messages", handlePostMessage, "POST")
+	r.HandleFunc("/rooms", handleGetRooms, "GET")
+	r.HandleFunc("/current-rooms", handleGetCurrentRooms, "GET")
+	r.HandleFunc("/rooms/join", handleJoinRooms, "POST")
 }
+
+func handleGetMessage(ctx http.TdkContext) error {
+	return nil
+}
+
+func handlePostMessage(ctx http.TdkContext) error {
+	return nil
+}
+
+func handleGetRooms(ctx http.TdkContext) error {
+	return nil
+}
+
+func handleGetCurrentRooms(ctx http.TdkContext) error {
+	return nil
+}
+
+func handleJoinRooms(ctx http.TdkContext) error {
+	return nil
+}
+
+
+func dummyFunc(ctx http.TdkContext) error {
+	return nil
+} 
 
 func index(ctx http.TdkContext) error {
 	ctx.Writer().Write([]byte("Hello world"))
