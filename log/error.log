@@ -1,0 +1,8 @@
+{"level":"info","ts":1535518580.1128552,"msg":"Kothak: Connected to Redis rates"}
+{"level":"info","ts":1535518580.167389,"msg":"Kothak: Connected to DB toped"}
+{"level":"fatal","ts":1535518580.1682112,"msg":"listen tcp :5050: bind: address already in use"}
+{"level":"info","ts":1535518643.924794,"msg":"Kothak: Connected to Redis rates"}
+{"level":"info","ts":1535518643.9398835,"msg":"Kothak: Connected to DB toped"}
+{"level":"info","ts":1535518643.941243,"msg":"Supervisor: starting geni-service on [::]:5050"}
+{"level":"info","ts":1535518643.941343,"msg":"Supervisor: starting http-service on [::]:8000"}
+{"level":"info","ts":1535518643.9412296,"msg":"Supervisor: starting admin-port on [::]:8573"}
